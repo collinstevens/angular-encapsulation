@@ -1,27 +1,11 @@
-# AngularEncapsulation
+# Angular Encapsulation
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
+This was created to demonstrate a problem I am running into during in a real project.
 
-## Development server
+Styles from `ViewEncapsulation.Emulated` are copied into all `#shadow-dom` roots across the DOM tree.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This includes the children of a `ViewEncapsulation.ShadowDom` component where the `ViewEncapsulation.ShadowDom` component itself is a sibling to a `ViewEncapsulation.Emulated` component.
 
-## Code scaffolding
+[GitHub Issue](https://github.com/angular/angular/issues/5059)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+[StackOverflow Question](https://stackoverflow.com/questions/53129175/viewencapsulation-emulated-styles-are-copied-into-shadow-root-by-a-viewencapsul)
